@@ -1,0 +1,10 @@
+50 2400
+100 IIYKv ZUk1
+300 IIYKv ZUk1
+100 fzwk BhaagMikha
+300 IIYKv ZUk1
+400 BhaagMikha fzwk
+400 BhaagMikha fzwk
+300 IIYKv ZUk1
+300 IIYKv ZUk1
+400 ZUk1 IIYKv

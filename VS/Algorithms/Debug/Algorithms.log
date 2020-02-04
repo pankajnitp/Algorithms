@@ -1,0 +1,4 @@
+﻿  main.cpp
+h:\coding\coding\algo\algorithms\main.cpp(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Algorithms.vcxproj -> H:\Coding\Coding\Algo\Debug\Algorithms.exe
+  Algorithms.vcxproj -> H:\Coding\Coding\Algo\Debug\Algorithms.pdb (Partial PDB)
