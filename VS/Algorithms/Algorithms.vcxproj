@@ -23,6 +23,7 @@
     <ProjectGuid>{AC557976-5170-4912-863D-16CBAF759BE5}</ProjectGuid>
     <RootNamespace>Algorithms</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <ProjectName>Eureka</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -113,6 +114,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="math_tc.cpp" />
     <ClCompile Include="MoveElectron.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -122,6 +124,7 @@
     <ClCompile Include="Sangrahak_user.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="shared_ptr_tc.cpp" />
     <ClCompile Include="Song_Detect.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -131,8 +134,12 @@
     <ClCompile Include="Source.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="vector_tc.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="container.h" />
+    <ClInclude Include="testcases.h" />
+    <ClInclude Include="vector.h" />
     <ClInclude Include="math_util.h" />
     <ClInclude Include="shared_ptr.h" />
   </ItemGroup>

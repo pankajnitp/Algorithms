@@ -16,6 +16,15 @@
     <Filter Include="Source Files\Algorithms">
       <UniqueIdentifier>{3fcb9c1c-2ca1-4c0f-b306-6e5af957426d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Maths">
+      <UniqueIdentifier>{0a800212-d47d-40df-8f8b-bcbf85c6e1cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Container">
+      <UniqueIdentifier>{b69fd838-bd92-481c-8d85-785ae1d156a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TestCases">
+      <UniqueIdentifier>{e9228f88-7892-4e94-a542-1dae5a44cf4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MoveElectron.cpp">
@@ -39,13 +48,31 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vector_tc.cpp">
+      <Filter>Source Files\TestCases</Filter>
+    </ClCompile>
+    <ClCompile Include="shared_ptr_tc.cpp">
+      <Filter>Source Files\TestCases</Filter>
+    </ClCompile>
+    <ClCompile Include="math_tc.cpp">
+      <Filter>Source Files\TestCases</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="shared_ptr.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="vector.h">
+      <Filter>Source Files\Container</Filter>
     </ClInclude>
     <ClInclude Include="math_util.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="container.h">
+      <Filter>Source Files\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="shared_ptr.h">
+      <Filter>Source Files\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="testcases.h">
+      <Filter>Source Files\Container</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
