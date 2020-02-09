@@ -77,6 +77,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../Algorithms/inc</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -113,8 +114,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="math_tc.cpp" />
     <ClCompile Include="MoveElectron.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -124,7 +123,6 @@
     <ClCompile Include="Sangrahak_user.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="shared_ptr_tc.cpp" />
     <ClCompile Include="Song_Detect.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -134,14 +132,19 @@
     <ClCompile Include="Source.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="vector_tc.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\testcases\heap_tc.cpp" />
+    <ClCompile Include="src\testcases\math_tc.cpp" />
+    <ClCompile Include="src\testcases\shared_ptr_tc.cpp" />
+    <ClCompile Include="src\testcases\vector_tc.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="container.h" />
-    <ClInclude Include="testcases.h" />
-    <ClInclude Include="vector.h" />
-    <ClInclude Include="math_util.h" />
-    <ClInclude Include="shared_ptr.h" />
+    <ClInclude Include="inc\container.h" />
+    <ClInclude Include="inc\heap.h" />
+    <ClInclude Include="inc\math_util.h" />
+    <ClInclude Include="inc\shared_ptr.h" />
+    <ClInclude Include="inc\testcases.h" />
+    <ClInclude Include="inc\vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

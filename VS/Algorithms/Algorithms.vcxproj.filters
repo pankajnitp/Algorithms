@@ -45,34 +45,40 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files\Algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\testcases\heap_tc.cpp">
+      <Filter>Source Files\TestCases</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testcases\math_tc.cpp">
+      <Filter>Source Files\TestCases</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testcases\shared_ptr_tc.cpp">
+      <Filter>Source Files\TestCases</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testcases\vector_tc.cpp">
+      <Filter>Source Files\TestCases</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="vector_tc.cpp">
-      <Filter>Source Files\TestCases</Filter>
-    </ClCompile>
-    <ClCompile Include="shared_ptr_tc.cpp">
-      <Filter>Source Files\TestCases</Filter>
-    </ClCompile>
-    <ClCompile Include="math_tc.cpp">
-      <Filter>Source Files\TestCases</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vector.h">
+    <ClInclude Include="inc\container.h">
       <Filter>Source Files\Container</Filter>
     </ClInclude>
-    <ClInclude Include="math_util.h">
+    <ClInclude Include="inc\heap.h">
+      <Filter>Source Files\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\shared_ptr.h">
+      <Filter>Source Files\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\testcases.h">
+      <Filter>Source Files\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\vector.h">
+      <Filter>Source Files\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\math_util.h">
       <Filter>Source Files\Maths</Filter>
-    </ClInclude>
-    <ClInclude Include="container.h">
-      <Filter>Source Files\Container</Filter>
-    </ClInclude>
-    <ClInclude Include="shared_ptr.h">
-      <Filter>Source Files\Container</Filter>
-    </ClInclude>
-    <ClInclude Include="testcases.h">
-      <Filter>Source Files\Container</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
