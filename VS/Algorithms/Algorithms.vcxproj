@@ -137,6 +137,7 @@
     <ClCompile Include="src\testcases\math_tc.cpp" />
     <ClCompile Include="src\testcases\shared_ptr_tc.cpp" />
     <ClCompile Include="src\testcases\vector_tc.cpp" />
+    <ClCompile Include="threads_exclusion_tc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\container.h" />
