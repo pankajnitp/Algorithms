@@ -3,6 +3,7 @@
 #include <iostream>
 #include "testcases.h"
 #include <mutex>
+#include <condition_variable>
 #include <thread>
 #include <windows.h>
 
@@ -10,51 +11,60 @@
 
 using namespace std;
 
-static mutex mux1;
-static mutex mux2;
+std::mutex mux;
+std::condition_variable cond_var;
 
-static int shared_item = 0;
+static int shared_val = 0;
+static bool enable_worker = false;
+static bool enable_main = true;
 
-void task1()
+void worker_fn()
 {
 	while (1)
 	{
-		while (1)
-		{
-			mux1.lock();
-			if (mux2.try_lock())
-			{
-				break;
-			}
-			mux1.unlock();
-		}
-		cout << "Task1 - shared val = " << shared_item++ << endl;
+		std::unique_lock<std::mutex> lck(mux);
+		cond_var.wait(lck, [] {return enable_worker; });
+
+		cout << "Worker sees val = " << shared_val++ << endl;
 		Sleep(TIME_GAP);
-		mux2.unlock();
-		mux1.unlock();
+
+		enable_main = true;
+		enable_worker = false;
+
+		cond_var.notify_one();
 	}
 }
 
-void task2()
+void main_fn()
 {
-	cout << "Task2 - shared val = " << shared_item++ << endl;
+	cout << "Main sees val = " << shared_val++ << endl;
 }
 
 void threads_exclusion_tc_main()
 {
-	thread t1(task1);
+	// Worker thread
+	thread worker(worker_fn);
+
+	//Main thread continues
+	main_fn();
+	enable_worker = true;
+	enable_main = false;
+	cond_var.notify_one(); // notify worker thread else it will keep waiting forever
 
 	while (1)
 	{
-		mux2.lock();
-		mux1.lock();
+		std::unique_lock<std::mutex> lck(mux);
+		cond_var.wait(lck, [] {return enable_main; });
 
-		task2();
+		main_fn();
 		Sleep(TIME_GAP);
 
-		mux1.unlock();
-		mux2.unlock();
+		enable_main = false;
+		enable_worker = true;
+
+		cond_var.notify_one();
 	}
 
-	t1.join();
+	//Main thread waits until worker thread returns
+	worker.join();
 }
