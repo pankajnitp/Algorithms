@@ -1,3 +1,6 @@
+VS/.vs
+VS/Debug
+VS/Algorithms/Debug
 build
 .vscode
 *.swp
@@ -10,3 +13,4 @@ build
 *.exe
 *.opendb
 *.suo
+*.filters
