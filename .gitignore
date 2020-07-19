@@ -1,0 +1,12 @@
+build
+.vscode
+*.swp
+*.log
+*.tlog
+*.db
+*.ipch
+**.objbj
+*.pdb
+*.exe
+*.opendb
+*.suo
