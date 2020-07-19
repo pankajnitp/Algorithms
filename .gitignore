@@ -5,7 +5,7 @@ build
 *.tlog
 *.db
 *.ipch
-**.objbj
+*.obj
 *.pdb
 *.exe
 *.opendb
